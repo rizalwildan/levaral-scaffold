@@ -3,5 +3,6 @@
     "/css/app.css": "/css/app.css",
     "/css/backend.css": "/css/backend.css",
     "/css/fontawesome.css": "/css/fontawesome.css",
-    "/js/backend.js": "/js/backend.js"
+    "/js/backend.js": "/js/backend.js",
+    "/js/dataTables.js": "/js/dataTables.js"
 }

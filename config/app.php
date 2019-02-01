@@ -166,7 +166,13 @@ return [
          * Package Service Providers...
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
         Laravolt\Avatar\ServiceProvider::class,
+        Laratrust\LaratrustServiceProvider::class,
+        Lavary\Menu\ServiceProvider::class,
+        Yajra\DataTables\DataTablesServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -226,6 +232,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Avatar'    => Laravolt\Avatar\Facade::class,
+        'Laratrust'   => Laratrust\LaratrustFacade::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'Menu'      => Lavary\Menu\Facade::class,
+        'DataTables' => Yajra\DataTables\Facades\DataTables::class,
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

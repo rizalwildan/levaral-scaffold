@@ -16,6 +16,21 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
+// SuperAdmin Control Panel
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth','role:administrator|superadministrator'], 'namespace' => 'Admin'], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    // Users
+    Route::resource('users', 'UsersController');
+    Route::get('/get-users', 'UsersController@getUserData')->name('users-dt');
+
+    // Roles
+    Route::resource('roles', 'RolesController');
+    Route::get('/get-roles', 'RolesController@getDataRoles')->name('roles-dt');
+
+    // Permissions
+    Route::resource('permissions', 'PermissionsController');
+    Route::get('/get-permissions', 'PermissionsController@getDataPermissions')->name('permissions-dt');
+});
+
+Route::get('logout', 'Auth\LoginController@logout')->name('logout');

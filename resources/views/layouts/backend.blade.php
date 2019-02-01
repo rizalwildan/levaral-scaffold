@@ -32,6 +32,9 @@
     </main>
 </div>
 <!-- Scripts -->
-<script src="{{ asset('js/backend.js') }}" defer></script>
+<script src="{{ asset('js/backend.js') }}"></script>
+@include('sweet::alert')
+<script src="{{ asset('js/dataTables.js') }}"></script>
+@stack('dataTables');
 </body>
 </html>

@@ -15,5 +15,6 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/backend/app.scss', 'public/css/backend.css')
     .sass('resources/sass/fontawesome.scss', 'public/css/fontawesome.css')
-    .js('resources/js/backend/dashboard.js', 'public/js/backend.js');
+    .js('resources/js/backend/dashboard.js', 'public/js/backend.js')
+    .js('resources/js/backend/dataTables.js', 'public/js/dataTables.js');
 
